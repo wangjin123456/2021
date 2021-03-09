@@ -4,7 +4,7 @@ import org.I0Itec.zkclient.ZkClient;
 
 /**
  * @ClassName ZkClientUtils
- * @Author 蚂蚁课堂余胜军 QQ644064779 www.mayikt.com
+ * @Author
  * @Version V1.0
  **/
 public class ZkClientUtils {
