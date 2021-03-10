@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>mt-sp-service-api-member</module>
-        <module>mt-sp-service-api-base</module>
+
         <module>mt-sp-service-api-weixin</module>
         <module>mt-sp-service-api-sso</module>
         <module>mt-sp-service-api-item</module>
