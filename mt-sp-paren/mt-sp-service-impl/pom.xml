@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mt-sp-paren</artifactId>
+        <groupId>com.mayikt</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mt-sp-service-impl</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>mt-sp-service-weixin</module>
+        <module>mt-sp-service-member</module>
+        <module>mt-sp-service-sso</module>
+        <module>mt-sp-service-tem</module>
+        <module>mt-sp-service-coupon</module>
+        <module>mt-sp-service-search</module>
+        <module>mt-sp-service-pay</module>
+        <module>mt-sp-service-order</module>
+        <module>mt-sp-service-spike</module>
+        <module>mt-sp-service-sms</module>
+    </modules>
+
+
+</project>
