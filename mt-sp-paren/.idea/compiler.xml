@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mt-sp-service-order" />
+        <module name="mt-sp-service-product-canalclient" />
+        <module name="mt-sp-service-pay" />
+        <module name="mt-sp-service-api-weixin" />
+        <module name="mt-sp-service-tem" />
+        <module name="mt-sp-service-api-sms" />
+        <module name="mt-sp-service-weixin" />
+        <module name="mt-sp-service-api-item" />
+        <module name="mt-sp-service-api-sso" />
+        <module name="mt-sp-service-sso" />
+        <module name="mt-sp-basics" />
+        <module name="mt-sp-service-api-coupon" />
+        <module name="mt-sp-service-base" />
+        <module name="mt-sp-service-api-member" />
+        <module name="mt-sp-service-member-canalclient" />
+        <module name="mt-sp-service-member" />
+        <module name="mt-sp-service-api-spike" />
+        <module name="mt-sp-service-spike" />
+        <module name="mt-sp-service-coupon" />
+        <module name="mt-sp-service-member-job" />
+        <module name="mt-sp-service-sms" />
+        <module name="mt-sp-service-api-search" />
+        <module name="mt-sp-service-search" />
+        <module name="mt-sp-service-api-order" />
+        <module name="mt-sp-service-api-pay" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mt-sp-service-api-base" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mt-sp-basics" options="-parameters" />
+      <module name="mt-sp-service-api-base" options="-parameters" />
+      <module name="mt-sp-service-api-coupon" options="-parameters" />
+      <module name="mt-sp-service-api-item" options="-parameters" />
+      <module name="mt-sp-service-api-member" options="-parameters" />
+      <module name="mt-sp-service-api-order" options="-parameters" />
+      <module name="mt-sp-service-api-pay" options="-parameters" />
+      <module name="mt-sp-service-api-search" options="-parameters" />
+      <module name="mt-sp-service-api-sms" options="-parameters" />
+      <module name="mt-sp-service-api-spike" options="-parameters" />
+      <module name="mt-sp-service-api-sso" options="-parameters" />
+      <module name="mt-sp-service-api-weixin" options="-parameters" />
+      <module name="mt-sp-service-base" options="-parameters" />
+      <module name="mt-sp-service-coupon" options="-parameters" />
+      <module name="mt-sp-service-member" options="-parameters" />
+      <module name="mt-sp-service-member-canalclient" options="-parameters" />
+      <module name="mt-sp-service-member-job" options="-parameters" />
+      <module name="mt-sp-service-order" options="-parameters" />
+      <module name="mt-sp-service-pay" options="-parameters" />
+      <module name="mt-sp-service-product-canalclient" options="-parameters" />
+      <module name="mt-sp-service-search" options="-parameters" />
+      <module name="mt-sp-service-sms" options="-parameters" />
+      <module name="mt-sp-service-spike" options="-parameters" />
+      <module name="mt-sp-service-sso" options="-parameters" />
+      <module name="mt-sp-service-tem" options="-parameters" />
+      <module name="mt-sp-service-weixin" options="-parameters" />
+    </option>
+  </component>
+</project>

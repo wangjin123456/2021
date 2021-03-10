@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/mt-sp-basics/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-coupon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-item/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-member/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-sms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-spike/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-sso/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-weixin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-canal/mt-sp-service-member-canalclient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-canal/mt-sp-service-product-canalclient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-coupon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-member/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-sms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-spike/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-sso/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-tem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-weixin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-job/mt-sp-service-member-job/src/main/java" charset="UTF-8" />
+  </component>
+</project>
