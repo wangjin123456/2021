@@ -29,54 +29,28 @@ public class ZkTemporaryOrderNodeLock extends ZookeeperAbstractTemplateLock {
     private String prevLockPath;
     private CountDownLatch countDownLatch;
 
-    @Override
-    public boolean tryLock() {
-        // 死循环问题
-        // 1.创建一个临时顺序编号节点
-        String tempNodeName = LockContext.get();
-        if (StringUtils.isEmpty(tempNodeName)) {
-            tempNodeName = ZkClientUtils.newZkClient().createEphemeralSequential(lockParent + lockPath, "lock");
-            LockContext.set(tempNodeName);
-        }
-        // 2.查询到当前根节点下所有的子节点 实现排序
-        List<String> childrens = ZkClientUtils.getZkClient().getChildren(lockParent);
-//        if (childrens == null) {
-//               // 异常 bug
-//        }
-        Collections.sort(childrens);
-        // 3.查找到最小的节点 实现比较 如果是为最小的节点 则表示获取锁成功
-        if (tempNodeName.equals(lockParent + "/" + childrens.get(0))) {
-            return true;
-        }
-        // 4.如果不是为最小节点的情况下，则表示获取锁失败 失败的情况下
-        // childrens 子节点=lockPath01 tempNodeName=/lock/lockPath01
-        int index = Collections.binarySearch(childrens, tempNodeName.substring(lockParent.length() + 1));
-        // 5.查找到我当前对应的上一个节点是谁
-        prevLockPath = lockParent + "/" + childrens.get(index - 1);
-        // 5.采用事件监听监听到我上一个节点
-        return false;
-    }
 
     @Override
-    public void waitLock() {
-
-        // 阻塞等待 被唤醒
-        // 创建一个事件监听
+    public void waitLock() throws InterruptedException {
+        //阻塞等待被唤醒
         IZkDataListener iZkDataListener = new IZkDataListener() {
-
             @Override
             public void handleDataChange(String s, Object o) throws Exception {
+
             }
 
             @Override
             public void handleDataDeleted(String s) throws Exception {
-                //当我们节点被删除之后，我们应该从新被唤醒
-                if (countDownLatch != null)
+                //当节点删除后我们应该从新唤醒
+                if (countDownLatch != null) {
                     countDownLatch.countDown();
+                }
+
             }
         };
         ZkClientUtils.getZkClient().subscribeDataChanges(prevLockPath, iZkDataListener);
         try {
+            //让当前线程阻塞
             if (ZkClientUtils.getZkClient().exists(prevLockPath)) {
                 //让当前线程阻塞
                 countDownLatch = new CountDownLatch(1);
@@ -84,11 +58,38 @@ public class ZkTemporaryOrderNodeLock extends ZookeeperAbstractTemplateLock {
             }
 
         } catch (Exception e) {
-
+            e.getCause();
         }
-        // 当我们节点被删除之后，我们应该从新被唤醒 移除事件监听
+        //当我们节点被删除以后，我们应该重新唤醒，移除事件监听
         ZkClientUtils.getZkClient().unsubscribeDataChanges(prevLockPath, iZkDataListener);
     }
 
 
+    @Override
+    public boolean tryLock() {
+        //1创建一个临时编号节点
+        String tempNodeName = LockContext.get();
+        if (StringUtils.isEmpty(tempNodeName)) {
+            tempNodeName = ZkClientUtils.newZkClient().createEphemeralSequential(lockParent + lockPath, "lock");
+            LockContext.set(tempNodeName);
+        }
+        //2 查询到当前根节点
+        List<String> childrens = ZkClientUtils.getZkClient().getChildren(lockParent);
+        if (childrens != null) {
+
+        }
+        Collections.sort(childrens);
+        //3查找到当前最小的节点，实现比较，如果为最小节点，则表示获取锁成功
+        if (tempNodeName.equals(lockParent + "/" + childrens.get(0))) {
+            return true;
+        }
+        //4如果不足为最小节点的情况下，则表示获取锁失败，失败的情况下
+        int index = Collections.binarySearch(childrens, tempNodeName.substring(lockParent.length() + 1));
+
+        //5 查找到我当前对应的上一个节点是谁
+        prevLockPath = lockParent + "/" + childrens.get(index - 1);
+
+        //6 采用事件监听监听到上一个节点
+        return false;
+    }
 }

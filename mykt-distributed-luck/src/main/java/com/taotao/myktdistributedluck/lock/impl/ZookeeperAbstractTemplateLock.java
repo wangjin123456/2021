@@ -42,16 +42,17 @@ public abstract class ZookeeperAbstractTemplateLock implements Lock {
         //关闭连接，释放锁
         ZkClientUtils.getZkClient().close();
     }
-@Override
-public  void getLock() throws InterruptedException {
+
+    @Override
+    public void getLock() throws InterruptedException {
         //调用trylock获取锁
-    for (int i = 0; i < 5; i++) {
-        boolean result=tryLock();
-        if(result){
-            return;
+        for (int i = 0; i < 5; i++) {
+            boolean result = tryLock();
+            if (result) {
+                return;
+            }
         }
+        waitLock();
+        getLock();
     }
-    waitLock();
-    getLock();
-}
 }

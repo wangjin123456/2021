@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/mt-sp-basics/pom.xml" />
         <option value="$PROJECT_DIR$/mt-sp-service-api/mt-sp-service-api-base/pom.xml" />
       </set>
     </option>

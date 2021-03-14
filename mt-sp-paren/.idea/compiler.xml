@@ -16,7 +16,6 @@
         <module name="mt-sp-service-api-item" />
         <module name="mt-sp-service-api-sso" />
         <module name="mt-sp-service-sso" />
-        <module name="mt-sp-basics" />
         <module name="mt-sp-service-api-coupon" />
         <module name="mt-sp-service-base" />
         <module name="mt-sp-service-api-member" />
@@ -34,6 +33,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mt-sp-basics" target="1.8" />
       <module name="mt-sp-service-api-base" target="1.8" />
     </bytecodeTargetLevel>
   </component>
