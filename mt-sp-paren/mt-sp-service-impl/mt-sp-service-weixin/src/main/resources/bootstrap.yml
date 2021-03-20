@@ -1,0 +1,33 @@
+spring:
+  application:
+    ###服务的名称
+    name: mayikt-weixin
+  cloud:
+    nacos:
+      discovery:
+        ###nacos注册地址
+        server-addr: 127.0.0.1:8848
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mayikt-member?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+server:
+  port: 9000
+wx:
+  mp:
+    configs:
+      - appId: wx80d3317081d39f40
+        secret: 4cd43fb8664340d5b4aed128d122b62d
+        token: mayikt
+
+mayikt:
+  wx:
+    defaultMsg: 您的消息我已经收到了，后期会给您回复的噢!
+    weatherUrl: http
+  member:
+    weixin:
+      login:
+        templateId: H87s4QTwOW410ungNLD6V9KbExZX_02GQc9SqOENBAQ

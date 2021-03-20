@@ -1,5 +1,5 @@
 
-package com.mayikt.api.impl.impl.wexin;
+package com.mayikt.api.impl.wexin;
 
 import com.mayikt.api.impl.weixin.WeChatService;
 import org.springframework.web.bind.annotation.RestController;
