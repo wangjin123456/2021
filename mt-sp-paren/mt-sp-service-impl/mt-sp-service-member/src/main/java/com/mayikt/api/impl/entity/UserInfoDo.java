@@ -1,0 +1,56 @@
+package com.mayikt.api.impl.entity;
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.mayikt.api.impl.member.dto.resp.UserInfoDto;
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
+@TableName("meite_user")
+public class UserInfoDo{
+    @TableId
+    private Integer userId;
+
+    /**
+     * 手机号码
+     */
+
+    private String mobile;
+
+
+    /**
+     * 用户名称
+     */
+
+    private String userName;
+    /**
+     * 性别 0 男 1女
+     */
+
+    private char sex;
+    /**
+     * 年龄
+     */
+
+    private Long age;
+    /**
+     * 注册时间
+     */
+
+    private Date createTime;
+
+    /**
+     * 账号是否可以用 1 正常 0冻结
+     */
+
+    private char isAvalible;
+    /**
+     * 用户头像
+     */
+
+    private String picImg;
+
+
+}

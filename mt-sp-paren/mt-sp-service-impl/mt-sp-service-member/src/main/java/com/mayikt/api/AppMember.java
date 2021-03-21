@@ -1,6 +1,5 @@
 
-package com.mayikt.api.impl;
-
+package com.mayikt.api;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

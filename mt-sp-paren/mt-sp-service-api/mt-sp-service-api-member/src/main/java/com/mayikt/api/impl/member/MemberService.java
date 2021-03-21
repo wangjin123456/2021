@@ -19,7 +19,7 @@ import java.util.Map;
 public interface MemberService {
     @GetMapping("memberToWeiXin")
     String memberToWeiXin(Integer a);
-    @GetMapping
+    @GetMapping("/addMember")
     BaseResponse<String> addMember(String userName, String pwd, Integer age);
 
     @PostMapping("/updateUser")
