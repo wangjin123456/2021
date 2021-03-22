@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mt-sp-service-order" />
-        <module name="mt-sp-service-product-canalclient" />
         <module name="mt-sp-service-pay" />
         <module name="mt-sp-service-api-weixin" />
         <module name="mt-sp-service-tem" />
@@ -15,6 +14,7 @@
         <module name="mt-sp-service-weixin" />
         <module name="mt-sp-service-api-item" />
         <module name="mt-sp-service-api-sso" />
+        <module name="mt-sp-service-api-pay" />
         <module name="mt-sp-service-sso" />
         <module name="mt-sp-service-api-coupon" />
         <module name="mt-sp-service-base" />
@@ -29,7 +29,7 @@
         <module name="mt-sp-service-api-search" />
         <module name="mt-sp-service-search" />
         <module name="mt-sp-service-api-order" />
-        <module name="mt-sp-service-api-pay" />
+        <module name="mt-sp-service-product-canalclient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

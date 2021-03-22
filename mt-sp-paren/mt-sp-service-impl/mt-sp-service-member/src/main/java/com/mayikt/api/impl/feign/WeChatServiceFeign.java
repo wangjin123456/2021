@@ -1,5 +1,5 @@
 
-package com.mayikt.api.impl.impl.feign;
+package com.mayikt.api.impl.feign;
 
 import com.mayikt.api.impl.weixin.WeChatService;
 import org.springframework.cloud.openfeign.FeignClient;

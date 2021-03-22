@@ -1,12 +1,11 @@
 
-package com.mayikt.api.impl.impl.member;
+package com.mayikt.api.impl.member;
 
 import com.mayikt.api.impl.base.BaseApiService;
 import com.mayikt.api.impl.base.BaseResponse;
 import com.mayikt.api.impl.entity.UserDo;
-import com.mayikt.api.impl.impl.feign.WeChatServiceFeign;
+import com.mayikt.api.impl.feign.WeChatServiceFeign;
 import com.mayikt.api.impl.mapper.UserMapper;
-import com.mayikt.api.impl.member.MemberService;
 import com.mayikt.api.impl.member.dto.req.UserReqDto;
 import com.mayikt.api.impl.member.dto.resp.UserRespDto;
 import org.apache.logging.log4j.util.Strings;

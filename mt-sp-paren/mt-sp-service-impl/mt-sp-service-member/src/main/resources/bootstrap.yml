@@ -14,4 +14,12 @@ spring:
     active:  dev
 server:
   port: 7000
+mayikt:
+  userName: mayikt
+  thread:
+    corePoolSize: 10
+    maxPoolSize: 10
+    queueCapacity: 20
+    keepAlive: 60
+
 

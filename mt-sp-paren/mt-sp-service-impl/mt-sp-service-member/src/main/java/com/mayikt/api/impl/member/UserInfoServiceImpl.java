@@ -1,12 +1,11 @@
 
-package com.mayikt.api.impl.impl.member;
+package com.mayikt.api.impl.member;
 
 
 import com.mayikt.api.impl.base.BaseApiService;
 import com.mayikt.api.impl.base.BaseResponse;
 import com.mayikt.api.impl.entity.UserInfoDo;
 import com.mayikt.api.impl.mapper.UserInfoMapper;
-import com.mayikt.api.impl.member.UserInfoService;
 import com.mayikt.api.impl.member.dto.resp.UserInfoDto;
 import com.mayikt.api.impl.utils.DesensitizationUtil;
 import com.mayikt.api.impl.utils.TokenUtils;
