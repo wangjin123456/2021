@@ -11,3 +11,6 @@ spring:
       max-idle: 5
       max-wait-millis: 100000
       min-idle: 2
+  redis:
+    host: 127.0.0.1
+    port: 6379
