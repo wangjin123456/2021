@@ -25,5 +25,6 @@
     <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-tem/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mt-sp-service-impl/mt-sp-service-weixin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mt-sp-service-job/mt-sp-service-member-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mt-sp-service-mq/mt-sp-service-member-consumer/src/main/java" charset="UTF-8" />
   </component>
 </project>

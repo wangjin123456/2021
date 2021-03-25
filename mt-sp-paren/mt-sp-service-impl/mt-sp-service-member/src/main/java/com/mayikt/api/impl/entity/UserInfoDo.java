@@ -52,5 +52,7 @@ public class UserInfoDo{
 
     private String picImg;
 
+    private String qqOpenId;
 
+    private String WxOpenId;
 }

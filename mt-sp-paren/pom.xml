@@ -15,6 +15,7 @@
         <module>mt-sp-service-job</module>
         <module>mt-sp-service-canal</module>
         <module>mt-sp-service-base</module>
+        <module>mt-sp-service-mq</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -1,5 +1,6 @@
 package com.mayikt.api.impl.weixin.dto.req;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -8,6 +9,7 @@ import java.util.Date;
 public class LoginReminderReqDto {
     private String openId;
     private String phone;
+    @JsonFormat(locale = "zh",timezone = "GMT+8",pattern = "yyyy-MM-dd HH:mm:ss")
     private Date loginTime;
     private String loginIp;
     private String equipment;

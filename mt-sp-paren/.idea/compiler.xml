@@ -7,14 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mt-sp-service-order" />
+        <module name="mt-sp-service-product-canalclient" />
         <module name="mt-sp-service-pay" />
+        <module name="mt-sp-service-member-consumer" />
         <module name="mt-sp-service-api-weixin" />
         <module name="mt-sp-service-tem" />
         <module name="mt-sp-service-api-sms" />
         <module name="mt-sp-service-weixin" />
         <module name="mt-sp-service-api-item" />
         <module name="mt-sp-service-api-sso" />
-        <module name="mt-sp-service-api-pay" />
         <module name="mt-sp-service-sso" />
         <module name="mt-sp-service-api-coupon" />
         <module name="mt-sp-service-base" />
@@ -29,7 +30,7 @@
         <module name="mt-sp-service-api-search" />
         <module name="mt-sp-service-search" />
         <module name="mt-sp-service-api-order" />
-        <module name="mt-sp-service-product-canalclient" />
+        <module name="mt-sp-service-api-pay" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -55,7 +56,9 @@
       <module name="mt-sp-service-coupon" options="-parameters" />
       <module name="mt-sp-service-member" options="-parameters" />
       <module name="mt-sp-service-member-canalclient" options="-parameters" />
+      <module name="mt-sp-service-member-consumer" options="-parameters" />
       <module name="mt-sp-service-member-job" options="-parameters" />
+      <module name="mt-sp-service-mq" options="-parameters" />
       <module name="mt-sp-service-order" options="-parameters" />
       <module name="mt-sp-service-pay" options="-parameters" />
       <module name="mt-sp-service-product-canalclient" options="-parameters" />

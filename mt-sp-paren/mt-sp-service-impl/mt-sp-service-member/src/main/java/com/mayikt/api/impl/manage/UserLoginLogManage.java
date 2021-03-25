@@ -27,11 +27,17 @@ public class UserLoginLogManage {
 
     @Async("taskExecutor")
     public void asyncLoginLog(UserLoginLogDo userLoginLogDo) {
-        //唯一登录
+        //1,唯一登录 根据userid+登录来源
 
         uniqueLogin(userLoginLogDo);
-        //登录日志
+        //2 插入登录日志
         insert(userLoginLogDo);
+        //3 记录登录日志信息
+        //4 调用短信，邮件，微信模板接口，提示登录
+        //5 唯一登录处理
+        //6 赠送优惠券
+        //7 其他操作
+
     }
 
     public  void uniqueLogin(UserLoginLogDo userLoginLogDo){

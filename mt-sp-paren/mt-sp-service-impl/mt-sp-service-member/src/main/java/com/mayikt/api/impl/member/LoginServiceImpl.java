@@ -10,8 +10,10 @@ import com.mayikt.api.impl.entity.UserLoginLogDo;
 import com.mayikt.api.impl.manage.UserLoginLogManage;
 import com.mayikt.api.impl.mapper.UserInfoMapper;
 import com.mayikt.api.impl.member.dto.req.UserLoginDto;
+import com.mayikt.api.impl.utils.DesensitizationUtil;
 import com.mayikt.api.impl.utils.MD5Util;
 import com.mayikt.api.impl.utils.TokenUtils;
+import com.mayikt.api.producer.LoginProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +39,8 @@ public class LoginServiceImpl extends BaseApiService implements LoginService {
     private UserInfoMapper userInfoMapper;
    @Autowired
    private TokenUtils tokenUtils;
+   @Autowired
+   private LoginProducer loginProducer;
     @Override
     public BaseResponse<JSONObject> login(UserLoginDto userLoginDto) {
         // 验证参数
@@ -68,8 +72,10 @@ public class LoginServiceImpl extends BaseApiService implements LoginService {
           data.put("userToken",usertoken);
         log.info(">>>登录成功:userToken{}<<<",usertoken);
           //异步单独线程处理
-        userLoginLogManage.asyncLoginLog(new UserLoginLogDo(userId,sourceIp,new Date(),usertoken,
-                channel,deviceInfor));
+        loginProducer.sendMsgLoginFollowUp( userId,  sourceIp,  new Date(),  usertoken,  channel,
+                 deviceInfor,  userInfoDo.getWxOpenId(),   DesensitizationUtil.mobileEncrypt(mobile));
+     /*   userLoginLogManage.asyncLoginLog(new UserLoginLogDo(userId,sourceIp,new Date(),usertoken,
+                channel,deviceInfor));*/
         return setResultSuccess(data);
     }
 }
